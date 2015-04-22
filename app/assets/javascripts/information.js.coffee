@@ -13,6 +13,8 @@ jQuery ->
 		key_length = $("#key").val()		
 		if key_length < content_length				
 			$.ajax(type:"POST", url: data.attr("action"),	data: data.serialize()).done ->		
+				$("#encrypted_data").css("display", "none").text("")
+				$("#error").css("display", "none") 		
 				if encrypted_data == ""		
 					$("#error").css("display", "inline-block")
 				else
