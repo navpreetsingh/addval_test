@@ -1,0 +1,28 @@
+// Place all the styles related to the Information controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#data_encrypt{
+	background-color: aliceblue;
+	height: 300px;
+	
+	h1, h4 {
+		padding-bottom: 40px
+	}
+
+	#content_label {
+		margin-left: -130px;
+	}
+
+	#key_label, #submit_button {
+		margin-left: 40px;
+	}
+
+	#encrypted_data {
+		display: none;
+	}
+	
+	#error {
+		display: none;
+	}
+}

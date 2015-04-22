@@ -1,0 +1,23 @@
+<% key = (2..10).to_a %>
+<div class = "row">
+
+	<div class = "col-xs-2">   	
+  	</div>
+
+  	<div class = "col-xs-8" id = "data_encrypt"> 
+		<h1>Welcome to Addval Take Away Home Test</h1>
+		<h4>Encrypt your data</h4>
+		<%= form_tag "/information/piece", id: "form_data" do %>   	
+			<label id = "content_label"> Content: </label>			
+			<%= text_area_tag :content, nil, required: true %>			
+			<label id = "key_label"> Encryption key: </label>		    
+		    <%= select_tag :key, options_for_select(key), class: "btn btn-info dropdown-toggle" %>		    
+		    <%= submit_tag "Save", class: "btn btn-primary", id: "submit_button" %>	    
+		<% end %>
+		<h4 id = "encrypted_data">Encrypted Content: </h4>
+		<h4 id = "error">Encryption cannot be done. Please select key less than content length.</h4>
+  	</div>
+
+  	<div class = "col-xs-2">   	
+  	</div>
+</div>
