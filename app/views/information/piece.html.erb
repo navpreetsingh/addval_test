@@ -12,7 +12,8 @@
 			<%= text_area_tag :content, nil, required: true %>			
 			<label id = "key_label"> Encryption key: </label>		    
 		    <%= select_tag :key, options_for_select(key), class: "btn btn-info dropdown-toggle" %>		    
-		    <%= submit_tag "Save", class: "btn btn-primary", id: "submit_button" %>	    
+		    <%= submit_tag "Save", class: "btn btn-primary", id: "submit_button" %>
+		    <%= image_tag("ajax.gif", size: "25x25", alt: "ajax loader", id: "loader") %>   
 		<% end %>
 		<h4 id = "encrypted_data">Encrypted Content: </h4>
 		<h4 id = "error">Encryption cannot be done. Please select key less than content length.</h4>

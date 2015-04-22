@@ -5,6 +5,8 @@
 jQuery ->	
 	$("#form_data").submit (e) -> 		
 		data = $(this)
+		$("#submit_button").attr('disabled', true);
+		$("#loader").css("display", "inline-block")
 		$("#encrypted_data").css("display", "none").text("")
 		$("#error").css("display", "none")
 		content_length = $("#content").val().replace(" ", "").length
@@ -16,6 +18,8 @@ jQuery ->
 				else
 					$("#encrypted_data").css("display", "inline-block").append("Encrypted Content: " +encrypted_data)			
 		else			
-			$("#error").css("display", "inline-block")		
+			$("#error").css("display", "inline-block")
+		$("#submit_button").attr('disabled', false);
+		$("#loader").css("display", "none")
 		e.preventDefault()
 		false
