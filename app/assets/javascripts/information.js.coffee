@@ -3,12 +3,12 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->	
-	$("#form_data").submit (e) -> 		
-		data = $(this)
+	$("#form_data").submit (e) ->
 		$("#submit_button").attr('disabled', true);
-		$("#loader").css("display", "inline-block")
+		$("#loader").css("display", "inline-block")		
 		$("#encrypted_data").css("display", "none").text("")
-		$("#error").css("display", "none")
+		$("#error").css("display", "none") 		
+		data = $(this)
 		content_length = $("#content").val().replace(" ", "").length
 		key_length = $("#key").val()		
 		if key_length < content_length				
